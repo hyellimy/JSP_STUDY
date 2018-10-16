@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>JSPStudy</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+
+	<!-- jsp등록 -->
+	<servlet>
+		<servlet-name>defaultObject</servlet-name>
+		<jsp-file>/defaultObject.jsp</jsp-file>
+		<init-param>
+			<param-name>location</param-name>
+			<param-value>c:/a/b/xxx.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>defaultObject</servlet-name>
+		<url-pattern>/default.action</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- 에러 페이지 설정 및 등록 -->
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/errors/error_500.jsp</location>
+	</error-page>
+
+	<error-page>
+		<error-code>400</error-code>
+		<location>/errors/error_400.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/errors/error_404.jsp</location>
+	</error-page>
+
+</web-app>
