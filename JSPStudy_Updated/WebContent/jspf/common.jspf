@@ -1,0 +1,11 @@
+<%!
+int count;
+
+public void jspInit() {
+  count = 0;
+}
+
+public void jspDestroy() {
+  count = 0;
+}
+%>
