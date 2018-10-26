@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE booklist SYSTEM "bml.dtd"[
+	<!-- 일반 외부 파스드 엔티티 선언 -->
+	<!--
+	<!ENTITY  some SYSTEM "some.txt"> 
+	-->
+	<!-- 일반 내부 파스드 엔티티 선언 -->
+	<!ENTITY describe "잘나가는 XML 교재입니다.">
+]>
+
+<booklist>
+	
+	<book kind="컴퓨터">
+		<title>XML 웹 서비스</title>
+		<author>신용권</author>
+		<publisher>프리렉</publisher>
+		<price>29000</price>
+		<desc>&describe;</desc>
+	</book>
+	
+	<book kind="소설">
+		<title>천국에서 만난 다섯사람</title>
+		<author>미치앨봄</author>
+		<publisher>세종서적</publisher>
+		<price>9000</price>
+		<desc>&describe;</desc>
+	</book>
+	
+	<book kind="컴퓨터">
+		<title>코어 자바</title>
+		<author>Cay S, Horstman</author>
+		<publisher>피어슨에듀케이션코리아</publisher>
+		<price>32000</price>
+		<desc>&describe;</desc>
+	</book>
+</booklist>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- XML문서의 구조를 명시하기 위한 XML 기반의 문서 정의 언어 -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+	<!-- 루트 엘리먼트 선언 -->
+	<element name="책목록">
+		<complexType>
+			<sequence>
+				<!-- 책목록의 서브 엘리먼트 선언 -->
+				<element name="책" minOccurs="0" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<!-- 책의 서브 엘리먼트 선언 -->
+							<element name="제목" type="string" />
+							<element name="저자" type="string" />
+							<element name="가격" type="int" />
+						</sequence>
+						<!-- 책의 속성 선언 -->
+						<attribute name="종류" type="string" />
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+
+</schema>

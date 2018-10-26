@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT order  (product+)>
+	<!ELEMENT product  EMPTY>
+	<!ATTLIST order
+		id 		    NMTOKEN		#REQUIRED
+		customer	CDATA 		#REQUIRED
+		orderDate	NMTOKEN		#REQUIRED
+		reqDate		NMTOKEN		#REQUIRED
+		comment		CDATA		#IMPLIED>
+	<!ATTLIST product
+		id 		    ID		    #REQUIRED
+		name		CDATA	    #REQUIRED
+		price		NMTOKEN		#REQUIRED
+		quantity	NMTOKEN		#REQUIRED>
+		

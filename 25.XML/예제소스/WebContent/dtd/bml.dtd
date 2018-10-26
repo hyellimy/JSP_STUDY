@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 엘리먼트 선언 -->
+<!ELEMENT booklist (book*)>
+	<!ELEMENT book (title, author, publisher, price, image?, desc?)>
+		<!ELEMENT title (#PCDATA)>
+		<!ELEMENT author (#PCDATA)>
+		<!ELEMENT publisher (#PCDATA)>
+		<!ELEMENT price (#PCDATA)>
+		<!ELEMENT image EMPTY>
+		<!ELEMENT desc (#PCDATA)>
+
+<!-- 속성 선언 -->
+<!ATTLIST book
+		  kind	CDATA #REQUIRED>
+		
+<!ATTLIST image
+          ename ENTITY  #IMPLIED
+          src   CDATA   #IMPLIED>
+        
+<!-- 일반 외부 파스드 엔티티 선언 -->
+<!--
+<!ENTITY  some SYSTEM "some.txt"> 
+-->
+
+<!-- 일반 내부 파스드 엔티티 선언 -->
+<!ENTITY describe "자">
+

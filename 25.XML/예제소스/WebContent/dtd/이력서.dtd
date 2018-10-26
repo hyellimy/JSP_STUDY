@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!ELEMENT profile (personalinfo,academic+,technology*,global*,otherinfo,family*,prospect)>
+	<!ELEMENT personalinfo (name,jumin,gender,age,address,phone,email,businesspart)>
+		<!ATTLIST personalinfo from CDATA #FIXED "한국" 
+                               image CDATA #REQUIRED>
+		<!ELEMENT name (korean, english, chinese?)>
+			<!ELEMENT korean (#PCDATA)>
+			<!ELEMENT english (#PCDATA)>
+			<!ELEMENT chinese (#PCDATA)>
+		<!ELEMENT jumin (#PCDATA)>
+		<!ELEMENT gender (#PCDATA)>
+		<!ELEMENT age (#PCDATA)>
+		<!ELEMENT address (#PCDATA)>
+		<!ELEMENT phone (#PCDATA)>
+		<!ELEMENT email (#PCDATA)>
+		<!ELEMENT businesspart (#PCDATA)>
+	<!ELEMENT academic (period,school,major,graduation,point)>
+		<!ELEMENT period (#PCDATA)>
+		<!ELEMENT school (#PCDATA)>
+		<!ELEMENT major (#PCDATA)>
+		<!ELEMENT graduation (#PCDATA)>
+		<!ELEMENT point (#PCDATA)>
+	<!ELEMENT technology (computationtech*,languagecert*,computationcert*)>
+		<!ELEMENT computationtech (#PCDATA)>
+		<!ELEMENT languagecert (#PCDATA)>
+		<!ELEMENT computationcert (#PCDATA)>
+	<!ELEMENT global (nation,gperiod,purpose)>
+		<!ELEMENT nation (#PCDATA)>
+		<!ELEMENT gperiod (#PCDATA)>
+		<!ELEMENT purpose (#PCDATA)>
+	<!ELEMENT otherinfo (brothers,habitation,hobby?,religion?)>
+		<!ELEMENT brothers (#PCDATA)>
+		<!ELEMENT habitation (#PCDATA)>
+		<!ELEMENT hobby (#PCDATA)>
+		<!ELEMENT religion (#PCDATA)>
+	<!ELEMENT family (fname,fage,scholarship,joblocation,position,livingtogether)>
+		<!ELEMENT fname (#PCDATA)>
+		<!ELEMENT fage (#PCDATA)>
+		<!ELEMENT scholarship (#PCDATA)>
+		<!ELEMENT joblocation (#PCDATA)>
+		<!ELEMENT position (#PCDATA)>
+		<!ELEMENT livingtogether (#PCDATA)>
+	<!ELEMENT prospect (salary,entering)>
+		<!ELEMENT salary (#PCDATA)>
+		<!ELEMENT entering (#PCDATA)>
+		
+
+<!ATTLIST academic kind CDATA #REQUIRED daynight CDATA "주간">
+<!ATTLIST languagecert language CDATA #REQUIRED>
+<!ATTLIST family relation CDATA #REQUIRED>

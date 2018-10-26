@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!ELEMENT 명함목록 (명함)*>
+	<!ELEMENT 명함 (회사명, 부서, 성명, 주소, 전화+, 팩스?)>
+		<!ELEMENT 회사명 (#PCDATA)>
+		<!ELEMENT 부서 (#PCDATA)>
+		<!ELEMENT 성명 (#PCDATA)>
+		<!ELEMENT 주소 (((시, 구) | (도, 시)), 동)>
+		<!ELEMENT 시 (#PCDATA)>
+		<!ELEMENT 도 (#PCDATA)>
+		<!ELEMENT 구 (#PCDATA)>
+		<!ELEMENT 동 (#PCDATA)>
+		<!ELEMENT 전화 (#PCDATA)>
+		<!ELEMENT 팩스 (#PCDATA)>

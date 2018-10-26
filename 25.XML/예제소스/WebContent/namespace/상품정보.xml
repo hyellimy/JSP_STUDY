@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 디폴트 네임스페이스 선언 -->
+<상품정보 xmlns="http://www.minchoeol.co.kr/2003/product">
+  <상품번호>LC100</상품번호>
+  <상품명>캠코드</상품명>
+  <제조사>LG 전자</제조사>
+</상품정보>
+

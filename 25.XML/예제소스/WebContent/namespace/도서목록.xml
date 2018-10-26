@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 접두어를 이용한 네임스페이스 선언 및 사용 -->
+<bml:books xmlns:bml="http://www.minchoel.co.kr/2003/book">
+	<bml:book bml:id="b1" bml:kind="소설">
+		<bml:title>시인과도둑</bml:title>
+		<bml:author>이문열</bml:author>
+	</bml:book>
+
+	<bml:book bml:id="b2" bml:kind="소설">
+		<bml:title>봉순이 언니</bml:title>
+		<bml:author>공지영</bml:author>
+	</bml:book>
+</bml:books>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE order SYSTEM "order.dtd">
+
+<order id="OD031" customer="서백 점" orderDate="2001-05-21" reqDate="2001-05-27" comment="5월 25일은 저희 회사 휴무일임으로 납품하지 마세요.">
+   <product id="H031" name="필립스 면도기" price="52000" quantity="30" />
+   <product id="H032" name="디스켓" price="4000" quantity="100" />
+</order>
+
+

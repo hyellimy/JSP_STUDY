@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 내부 DTD에 대한 문서 유형 선언 -->
+<!DOCTYPE  booklist [
+  <!-- 엘리먼트, 속성, 엔티티 등 선언 -->
+  <!ELEMENT booklist (book+)>
+  <!ELEMENT book (#PCDATA)>
+  <!ENTITY company  "KOSTA 출판사">
+]>
+
+<!--루트 엘리먼트 -->
+<booklist>
+  <book>시인과도둑</book>
+  <book>&company;</book>
+  <book>&company;</book>
+  <book>&company;</book>
+  <book>&company;</book>
+</booklist> 
+
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 외부 DTD에 대한 문서 유형 선언 -->
+<!DOCTYPE  booklist SYSTEM "bookList.dtd">
+
+<!--루트 엘리먼트 -->
+<booklist>
+  <book>시인과도둑</book>
+  <book>봉순이 언니</book>
+</booklist>

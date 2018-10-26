@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<책목록	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="booklist.xsd">
+  <책  	종류="소설">
+  	<제목>똑바로해 이것들아~~</제목>
+  	<저자>안영미</저자>
+  	<가격>5000</가격>
+  </책>
+  <책  	종류="소설">
+  	<제목>니들이 고생이 많다..</제목>
+  	<저자>강유미</저자>
+  	<가격>5000</가격>
+  </책>
+</책목록>
