@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<title>JSONP Sample Code</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+	function find() {
+		// <script> 동적생성
+		var script = document.createElement('script');
+		var name = encodeURIComponent(document.getElementById('name').value);
+		//var url = 'http://somedomain.com/search.jsp?callback=loadList&name=' + name;
+		var url = 'http://localhost/ajax/jsonp/search.jsp?callback=loadList&name=' + name;
+		script.setAttribute('src', url);
+		script.setAttribute('type', 'text/javascript');
+		document.getElementsByTagName('body')[0].appendChild(script);
+		return false;
+	}
+	
+	// callback 함수
+	function loadList(arr) {
+		var ul = document.getElementById('list');
+		var li = null;
+
+		while (ul.childNodes.length) {
+			ul.removeChild(ul.lastChild);
+		}
+
+		for (var i = 0; i < arr.length; i++) {
+			li = document.createElement('li');
+			li.appendChild(document.createTextNode(arr[i]));
+			ul.appendChild(li);
+		}
+	}
+</script>
+</head>
+<body>
+  <input id="name" type="text" size="10" />
+  <input id="btn" type="button" value="입력" onclick="return find();" />
+  <ul id="list"></ul>
+</body>
+</html>

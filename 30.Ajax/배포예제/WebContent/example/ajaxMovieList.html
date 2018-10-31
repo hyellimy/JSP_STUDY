@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="../js/ajax.js"></script>
+<script>
+window.onload = function(){
+	ajax({
+		url: "movieList.jsp",
+		callback : function(xhr){
+			setList(xhr.responseText);			
+		}
+	});
+}
+
+/**
+ * 실시간 영화순위 출력
+ */
+function setList(message){
+	//alert(message);
+	var list = message.split(/\s*,\s*/);//정규표현식
+	var select = "<ul>";
+	for ( var i in list) {
+		select += "<li>"+list[i]+"</li>";				
+	}
+	select += "</ul>";
+	
+	var view = document.getElementById("view");	
+	if(view){
+		view.innerHTML = select;
+	}
+	
+	// 5초단위로 요청(client polling)
+	setTimeout(function(){
+		ajax({
+			url: "movieList.jsp",
+			callback : function(xhr){
+				setList(xhr.responseText);			
+			}
+		});
+	}, 5000);
+}
+
+</script>
+</head>
+
+<body>
+<h2>서버에서 실시간 데이터 수신 및 출력</h2>
+<div id="view">
+</div>
+</body>
+</html>
+
+
+
